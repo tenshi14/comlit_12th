@@ -1,18 +1,74 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <title>立花展至のホームページ</title>
+    <title>立花　展至のホームページ</title>
+    <style>
+    body {
+        display: flex;
+        margin: 0;
+        font-family: monospace;
+      }
+      /* 背景文字のクラス */
+      #background-txt {
+        position: relative;
+        min-height: 100vh;
+        padding: 60px 100px;
+        background-color: #FFFFFD;
+      }
+      
+      /* 背景文字の疑似クラスを利用 */
+      #background-txt:before {
+        content: 'TACHIBANA TENSHI　　TACHIBANA TENSHI　　TACHIBANA TENSHI　　TACHIBANA TENSHI　　TACHIBANA TENSHI　　TACHIBANA TENSHI　　TACHIBANA TENSHI　　TACHIBANA TENSHI　　TACHIBANA TENSHI　　TACHIBANA TENSHI　　TACHIBANA TENSHI　　TACHIBANA TENSHI　　TACHIBANA TENSHI　　TACHIBANA TENSHI　　TACHIBANA TENSHI　　TACHIBANA TENSHI　　TACHIBANA TENSHI　　TACHIBANA TENSHI　　TACHIBANA TENSHI　　TACHIBANA TENSHI　　TACHIBANA TENSHI　　TACHIBANA TENSHI　　TACHIBANA TENSHI　　TACHIBANA TENSHI　　TACHIBANA TENSHI　　TACHIBANA TENSHI　　TACHIBANA TENSHI　　TACHIBANA TENSHI　　TACHIBANA TENSHI　　TACHIBANA TENSHI';
+        /* 画面上で一番後ろに表示するためにz-indexを0にしている */
+        z-index: 0;
+        /* 画面の決まった位置に固定 */
+        position: fixed;
+        /* ポジションの指定 */
+        top: 20px;
+        right: 20px;
+        left: 20px;
+        /* フォントサイズの指定 */
+        font-size: 70px;
+        /* フォントの指定 */
+        font-family: 'Pinyon Script', cursive;
+        /* 改行しなければ文字列が溢れてしまう場合に、自動的に開業する。 */
+        word-break: break-all;
+        /* 色の指定 */
+        color: #D3F6E0;
+      }
+      /* background-txtから継承している */
+      body > #background-txt * {
+        /* 文字より前に表示するためにbodyのz-indexを1にしている */
+        z-index: 1 !important;
+        position: relative !important;
+        /* 継承している */
+        top: inherit !important;
+        right: inherit !important;
+        bottom: inherit !important;
+        left: inherit !important;
+      }
+
+      #background-txt > h1:first-child {
+        text-align: center;
+      }
+
+      #background-txt > h1:first-child > img {
+        max-width: 50vw;
+      }
+    </style>
+    
 </head>
+
+  
 <body>
-    <h1 align = "center">立花　展至のホームページ</h1>
-    <table align="center">
+    <div id="background-txt"><h1>立花　展至のホームページ</h1><table align="center">
         <tbody>
             <tr>
                 <td rowspan="2">
                     <img src="shoumeishasin.jpg" width="300" height="414" border="0">
                     <br>
                     <br>
-                    <table width = 256>
+                    <table width="256">
                         <tbody>
                             <tr>
                                 <td width="230">
@@ -56,27 +112,27 @@
             <tr>
                 <td></td>
                 <td>
-                    <table width = "100%" border="0" cellpadding="0">
+                    <hr width="100%" size="1"><table width="100%" border="0" cellpadding="0">
                         <tbody>
                             <tr>
                                 <td align="left" valign="bottom"></td>
-                                <hr width="100%" size="1">
+                                
                             </tr>
                         </tbody>
                     </table>    
-                    <table width = "100%" border="0" cellpadding="0">
+                    <hr width="100%" size="1"><table width="100%" border="0" cellpadding="0">
                         <tbody>
                             <tr>
                                 <td align="left" valign="bottom"></td>
-                                <hr width="100%" size="1">
+                                
                             </tr>
                         </tbody>
                     </table>
-                    <table width = "100%" border="0" cellpadding="0">
+                    <strong>大学生活</strong><table width="100%" border="0" cellpadding="0">
                         <tbody>
                             <tr>
                                 <td align="left" valign="top"></td>
-                                <strong>大学生活</strong>
+                                
                             </tr>
                         </tbody>
                     </table>
@@ -90,11 +146,11 @@
                           </tr>
                        </tbody>
                     </table>
-                    <table width = "100%" border="0" cellpadding="0">
+                    <strong>部活動</strong><table width="100%" border="0" cellpadding="0">
                         <tbody>
                             <tr>
                                 <td align="left" valign="top"></td>
-                                <strong>部活動</strong>
+                                
                             </tr>
                         </tbody>
                     </table>
@@ -108,11 +164,11 @@
                           </tr>
                        </tbody>
                     </table>
-                    <table width = "100%" border="0" cellpadding="0">
+                    <strong>ボルダリング</strong><table width="100%" border="0" cellpadding="0">
                         <tbody>
                             <tr>
                                 <td align="left" valign="top"></td>
-                                <strong>ボルダリング</strong>
+                                
                             </tr>
                         </tbody>
                     </table>
@@ -130,6 +186,8 @@
             </tr>
         </tbody>    
     </table>
+</div>
+    
 
 
 
